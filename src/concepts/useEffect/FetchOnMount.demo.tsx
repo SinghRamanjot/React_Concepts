@@ -1,20 +1,35 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+
+const Timer = () => {
+  useEffect(() => {
+    const timer = setInterval(() => {
+      console.log("tick...");
+    }, 1000);
+    return () => {
+      clearInterval(timer);
+      console.log("timer cleaned up!");
+    };
+  }, []);
+
+  return <div>Timer is running</div>;
+};
 
 const FetchOnMount = () => {
-  const [count, setCount] = useState(0)
-  
-  console.log("I am the component rendering")
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    console.log("I ran after render!")
-  }, [])
+    console.log("effect ran!", count);
+
+    return () => {
+      console.log("cleanup ran!", count);
+    };
+  }, [count]);
 
   return (
     <div>
-      <p>{count}</p>
-      <button onClick={() => setCount(prev => prev + 1)}>Click me</button>
+      <button onClick={() => setCount((prev) => prev + 1)}>Click</button>
     </div>
-  )
+  );
 };
 
 export default FetchOnMount;
