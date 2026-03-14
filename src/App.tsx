@@ -6,6 +6,7 @@ import StableCallback from "./concepts/useCallback/StableCallback.demo";
 import UserDashboard from "./concepts/redux/UserDashboard.demo";
 import UseToggleDemo from "./concepts/customHooks/useToggle/useToggle.demo";
 import { useSelector } from "react-redux";
+import UseDebounceDemo from "./concepts/customHooks/useDebounce/useDebounce.demo";
 
 const App = () => {
   const user = useSelector((state: any) => state.user);
@@ -19,6 +20,7 @@ const App = () => {
       <StableCallback /> */}
       {/* <UserDashboard /> */}
       <UseToggleDemo />
+      <UseDebounceDemo />
     </div>
   );
 };
