@@ -4,6 +4,7 @@ import FocusInput from "./concepts/useRef/FocusInput.demo";
 import ExpensiveCalc from "./concepts/useMemo/ExpensiveCalc.demo";
 import StableCallback from "./concepts/useCallback/StableCallback.demo";
 import UserDashboard from "./concepts/redux/UserDashboard.demo";
+import UseToggleDemo from "./concepts/customHooks/useToggle/useToggle.demo";
 import { useSelector } from "react-redux";
 
 const App = () => {
@@ -16,7 +17,8 @@ const App = () => {
       <FocusInput />
       <ExpensiveCalc/>
       <StableCallback /> */}
-      <UserDashboard />
+      {/* <UserDashboard /> */}
+      <UseToggleDemo />
     </div>
   );
 };
