@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUser } from "../../store/userSlice/userSlice";
-import type { AppDispatch } from "../../store/store";
+import type { AppDispatch, RootState } from "../../store/store";
 
 function UserDashboard() {
   const dispatch = useDispatch<AppDispatch>();
-  const loading = useSelector((state: any) => state.user.loading);
-  const name = useSelector((state: any) => state.user.name);
-  const error = useSelector((state: any) => state.user.error);
+  const loading = useSelector((state: RootState) => state.user.loading);
+  const name = useSelector((state: RootState) => state.user.name);
+  const error = useSelector((state: RootState) => state.user.error);
   return (
     <div>
       <button onClick={() => dispatch(fetchUser())}>Fetch User</button>
