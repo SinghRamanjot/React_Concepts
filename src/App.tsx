@@ -5,8 +5,11 @@ import ExpensiveCalc from "./concepts/useMemo/ExpensiveCalc.demo";
 import StableCallback from "./concepts/useCallback/StableCallback.demo";
 import UserDashboard from "./concepts/redux/UserDashboard.demo";
 import UseToggleDemo from "./concepts/customHooks/useToggle/useToggle.demo";
+import PropsTyping from "./typescript/PropsTyping.demo";
+import RefTyping from "./typescript/RefTyping.demo";
 import { useSelector } from "react-redux";
 import UseDebounceDemo from "./concepts/customHooks/useDebounce/useDebounce.demo";
+import React from "react";
 
 const App = () => {
   const user = useSelector((state: any) => state.user);
@@ -21,6 +24,13 @@ const App = () => {
       {/* <UserDashboard /> */}
       <UseToggleDemo />
       <UseDebounceDemo />
+      <PropsTyping
+        name="adam"
+        age={22}
+        email="adam@mails.com"
+        isActive={true}
+      />
+      <RefTyping />
     </div>
   );
 };
